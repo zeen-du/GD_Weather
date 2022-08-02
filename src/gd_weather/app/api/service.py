@@ -101,10 +101,9 @@ class _GDService:
                 async with self.client.session.get(url=WEATHER_URL, timeout=HTTP_TIME_OUT, params=params) as resp:
                     logger.info(f"Get Weather: {info.complete_address}")
                     data = await resp.json()
-                    weather_data = data
-                    if not weather_data:
+                    if not data:
                         return
-                    resp = WeatherModel(**weather_data)
+                    resp = WeatherModel(**data)
                     logger.info(f"Get Weather: {info.complete_address}, Return: {resp}")
                     return resp
             except BaseException as e:
