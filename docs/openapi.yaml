@@ -25,11 +25,11 @@ paths:
                   service:
                     type: string
                     example: DG Weather Service
-                  text:
+                  msg:
                     type: string
                 required:
                   - service
-                  - text
+                  - msg
         '422':
           description: Validation Error
           content:
