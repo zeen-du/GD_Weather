@@ -85,7 +85,7 @@ class Lives(BaseModel):
 
     @classmethod
     def format_str(cls, values):
-        return f"{values['province']} {values['city']} 当前天气:{values['gd_weather']} 气温:{values['temperature']} " \
+        return f"{values['province']} {values['city']} 当前天气:{values['weather']} 气温:{values['temperature']} " \
                f"风向:{values['winddirection']} 风力:{values['windpower']} 湿度:{values['humidity']}\n"
 
 

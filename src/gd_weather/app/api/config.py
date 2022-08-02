@@ -19,6 +19,7 @@ class Settings(BaseSettings):
     gd_service_url: str = Field(..., env="GD_SERVICE_URL")
     gd_api_key: str = Field(..., env="GD_API_KEY")
     log_path: Path = Field(BASE_DIR.parent.parent.joinpath("logs"), env="LOG_PATH")
+    token: str = Field(..., env="TOKEN")
 
 
 settings = Settings(**ENV)

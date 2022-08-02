@@ -14,6 +14,12 @@ paths:
             type: string
           name: text
           in: query
+        - required: true
+          schema:
+            title: Token
+            type: string
+          name: token
+          in: header
       responses:
         '200':
           description: Successful Response
